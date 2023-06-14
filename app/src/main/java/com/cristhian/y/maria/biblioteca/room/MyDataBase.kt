@@ -4,13 +4,17 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.cristhian.y.maria.biblioteca.room.dao.*
 import java.util.Objects
 
 @Database(entities = [], version = 1)
 abstract class MyDataBase : RoomDatabase() {
 
-    abstract fun LibrosDao(): Objects
-    abstract fun ClientesDao(): Objects
+    abstract fun AutorDao(): AutorDao
+    abstract fun ClienteDao(): ClienteDao
+    abstract fun IdiomaDao(): IdiomaDao
+    abstract fun LibroDao(): LibroDao
+    abstract fun PrestamoDao(): PrestamoDao
 
     companion object {
         // Singleton prevents multiple instances of database opening at the

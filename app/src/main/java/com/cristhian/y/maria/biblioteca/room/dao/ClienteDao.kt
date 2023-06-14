@@ -1,5 +1,6 @@
 package com.cristhian.y.maria.biblioteca.room.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.cristhian.y.maria.biblioteca.room.models.ClienteModel
 import kotlinx.coroutines.flow.Flow
@@ -20,4 +21,7 @@ interface ClienteDao {
 
     @Delete
     suspend fun deleteCliente(cliente: ClienteModel)
+
+    @Query("SELECT * FROM cliente WHERE clienteID=:clienteId ")
+    fun getClienteById(clienteId: Int): LiveData<ClienteDao>
 }

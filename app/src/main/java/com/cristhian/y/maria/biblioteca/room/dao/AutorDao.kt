@@ -15,9 +15,11 @@ interface AutorDao {
     @Update
     fun updateAutor(libro: AutorModel)
 
-    @Query("DELETE FROM libro")
+    @Query("DELETE FROM autor")
     suspend fun clearAutores()
 
     @Delete
     suspend fun deleteAutor(libro: AutorModel)
+
+
 }

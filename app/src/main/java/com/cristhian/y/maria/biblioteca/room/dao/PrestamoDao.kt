@@ -20,4 +20,10 @@ interface PrestamoDao {
 
     @Delete
     suspend fun deletePrestamo(prestamo: PrestamoModel)
+
+    @Query("SELECT * FROM prestamo WHERE cliente=:clienteId ")
+    fun getPrestamosByCliente(clienteId: Int): Flow<List<PrestamoDao>>
+
+    @Query("SELECT * FROM prestamo WHERE libro=:libroId ")
+    fun getPrestamosByLibro(libroId: Int): Flow<List<PrestamoDao>>
 }

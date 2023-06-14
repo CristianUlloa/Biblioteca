@@ -1,5 +1,6 @@
 package com.cristhian.y.maria.biblioteca.room.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.cristhian.y.maria.biblioteca.room.models.LibroModel
 import kotlinx.coroutines.flow.Flow
@@ -20,4 +21,13 @@ interface LibroDao {
 
     @Delete
     suspend fun deleteLibro(libro: LibroModel)
+
+    @Query("SELECT * FROM libro WHERE libroID=:libroId ")
+    fun getLibroById(libroId: Int): LiveData<LibroDao>
+
+    @Query("SELECT * FROM libro WHERE libroID=:autorId ")
+    fun getLibrosByAutor(autorId: Int): Flow<List<LibroDao>>
+
+    @Query("SELECT * FROM idioma WHERE idioma=:idiomaId ")
+    fun getLibrosByIdioma(idiomaId: String): Flow<List<LibroDao>>
 }
