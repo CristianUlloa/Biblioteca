@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Agregar Cliente"
+			android:textSize="25sp"
+			android:textColor="#0000FF"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Primer Nombre:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETprimerNombre"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Segundo Nombre:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETsegundoNombre"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Primer Apellido:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETprimerApellido"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Segundo Apellido:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETsegundoApellido"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Numero de Telefono"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETtelefono"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"
+			android:inputType="phone"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Carnet:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETcarnet"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Direccion:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:minLines="2"
+			android:maxLines="4"
+			android:inputType="textMultiLine"
+			android:id="@+id/ETdireccion"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

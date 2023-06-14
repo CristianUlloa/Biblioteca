@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Agregar Prestamo"
+			android:textSize="25sp"
+			android:textColor="#0000FF"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Editorial:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETeditorial"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Autor:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<Spinner
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/SPNautor"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Tema:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETtema"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Titulo:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETtitulo"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Idioma:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<Spinner
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/SPNidioma"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Cantidad:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/ETcantidad"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+		<TextView
+			android:paddingTop="5dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Fecha Lanzamiento:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:inputType="date"
+			android:id="@+id/ETdireccion"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:textColor="#763430"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
