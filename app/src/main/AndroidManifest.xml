@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Biblioteca"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityAddPrestamo"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAddLibro"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAddIdioma"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAddCliente"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAddAutor"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

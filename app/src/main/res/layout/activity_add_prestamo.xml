@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Agregar Prestamo"
+			android:textSize="25sp"
+			android:textColor="#0000FF"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="5dp"
+			android:text="Fecha Prestamo:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold" />
+
+		<EditText
+			android:id="@+id/ETfechaPrestamo"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="date"
+			android:textColor="#763430" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="5dp"
+			android:text="Fecha Entrega"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold" />
+
+		<EditText
+			android:id="@+id/ETfechaEntrega"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:textColor="#763430" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:inputType="date"
+			android:paddingTop="5dp"
+			android:text="Libro:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold" />
+
+		<Spinner
+			android:id="@+id/SPNlibro"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="5dp"
+			android:text="Cliente:"
+			android:textColor="#000000"
+			android:textSize="12sp"
+			android:textStyle="bold" />
+
+		<Spinner
+			android:id="@+id/SPNcliente"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" />
+
+	</LinearLayout>
+
+</LinearLayout>
+

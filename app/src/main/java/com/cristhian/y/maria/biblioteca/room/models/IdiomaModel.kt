@@ -6,5 +6,5 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "idioma")
 data class IdiomaModel(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "idioma") val idioma: String,
+    @PrimaryKey() @ColumnInfo(name = "idioma") val idioma: String,
 )

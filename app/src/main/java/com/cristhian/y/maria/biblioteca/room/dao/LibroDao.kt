@@ -21,7 +21,7 @@ interface LibroDao {
 
     @Delete
     suspend fun deleteLibro(libro: LibroModel)
-
+/*
     @Query("SELECT * FROM libro WHERE libroID=:libroId ")
     fun getLibroById(libroId: Int): LiveData<LibroDao>
 
@@ -30,4 +30,6 @@ interface LibroDao {
 
     @Query("SELECT * FROM idioma WHERE idioma=:idiomaId ")
     fun getLibrosByIdioma(idiomaId: String): Flow<List<LibroDao>>
+
+ */
 }

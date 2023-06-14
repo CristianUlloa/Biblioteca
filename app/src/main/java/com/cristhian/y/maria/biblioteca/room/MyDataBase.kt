@@ -5,9 +5,15 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.cristhian.y.maria.biblioteca.room.dao.*
+import com.cristhian.y.maria.biblioteca.room.models.*
 import java.util.Objects
 
-@Database(entities = [], version = 1)
+@Database(entities = [
+    AutorModel::class,
+    ClienteModel::class,
+    IdiomaModel::class,
+    LibroModel::class,
+    PrestamoModel::class], version = 2)
 abstract class MyDataBase : RoomDatabase() {
 
     abstract fun AutorDao(): AutorDao

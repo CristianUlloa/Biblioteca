@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_add_autor"
+        android:title="Agregar Autor" />
+    <item
+        android:id="@+id/menu_add_cliente"
+        android:title="Agregar Cliente" />
+    <item android:title="Agregar Idioma" />
+    <item
+        android:id="@+id/menu_add_libro"
+        android:title="Agregar Libro" />
+    <item
+        android:id="@+id/menu_add_prestamo"
+        android:title="Agregar Prestamo" />
+    <item
+        android:id="@+id/menu_acerca_de"
+        android:title="Acerca de" />
+    <item
+    android:id="@+id/menu_salir"
+    android:title="Salir" />
+</menu>

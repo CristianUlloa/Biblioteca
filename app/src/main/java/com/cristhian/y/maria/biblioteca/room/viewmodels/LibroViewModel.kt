@@ -19,10 +19,10 @@ class LibroViewModel (application: Application) : AndroidViewModel(application) 
         repository = RepoLibro(libroDao)
         listaLibros = repository.getLibros()
     }
-    fun insertGasto(libro: LibroModel) =
+    fun insertLibro(libro: LibroModel) =
         viewModelScope.launch(Dispatchers.IO) { repository.saveLibro(libro) }
 
-    fun deleteGasto(libro: LibroModel) =
+    fun deleteLibro(libro: LibroModel) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteLibro(libro)
         }

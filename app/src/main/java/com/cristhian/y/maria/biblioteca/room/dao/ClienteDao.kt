@@ -21,7 +21,9 @@ interface ClienteDao {
 
     @Delete
     suspend fun deleteCliente(cliente: ClienteModel)
-
+/*
     @Query("SELECT * FROM cliente WHERE clienteID=:clienteId ")
-    fun getClienteById(clienteId: Int): LiveData<ClienteDao>
+    fun getClienteById(clienteId: Int): Flow<ClienteDao>
+    */
+
 }

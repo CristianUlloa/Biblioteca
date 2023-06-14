@@ -20,10 +20,10 @@ class AutorViewModel (application: Application) : AndroidViewModel(application) 
         repository = RepoAutor(autorDao)
         listaAutores = repository.getAutores()
     }
-    fun insertGasto(autor: AutorModel) =
+    fun insertAutor(autor: AutorModel) =
         viewModelScope.launch(Dispatchers.IO) { repository.saveAutor(autor) }
 
-    fun deleteGasto(autor: AutorModel) =
+    fun deleteAutor(autor: AutorModel) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAutor(autor)
         }

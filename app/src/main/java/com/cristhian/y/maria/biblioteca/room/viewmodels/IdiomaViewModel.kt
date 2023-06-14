@@ -19,10 +19,10 @@ class IdiomaViewModel(application: Application) : AndroidViewModel(application) 
         repository = RepoIdioma(idiomaDao)
         listaIdiomas = repository.getIdiomas()
     }
-    fun insertGasto(idioma: IdiomaModel) =
+    fun insertIdioma(idioma: IdiomaModel) =
         viewModelScope.launch(Dispatchers.IO) { repository.saveIdioma(idioma) }
 
-    fun deleteGasto(idioma: IdiomaModel) =
+    fun deleteIdioma(idioma: IdiomaModel) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteIdioma(idioma)
         }

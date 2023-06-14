@@ -25,5 +25,5 @@ data class LibroModel(
     @ColumnInfo(name = "titulo")  val titulo: String,
     @ColumnInfo(name = "idioma")  val idioma: String,
     @ColumnInfo(name = "cantidad")  val cantidad: Int,
-    @ColumnInfo(name = "fecha_lanzamiento")  val fechaLanzamiento: Date,
+    @ColumnInfo(name = "fecha_lanzamiento")  val fechaLanzamiento: String,
     )

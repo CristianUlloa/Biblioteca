@@ -14,7 +14,7 @@ import java.util.Date
         onDelete = ForeignKey.CASCADE
     ),
     ForeignKey(
-        entity = LibroModel::class,
+        entity = ClienteModel::class,
         parentColumns = arrayOf("clienteID"),
         childColumns = arrayOf("cliente"),
         onDelete = ForeignKey.CASCADE
@@ -22,8 +22,8 @@ import java.util.Date
 ])
 data class PrestamoModel(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "prestamoID") val id: Int,
-    @ColumnInfo(name = "fecha_prestamo") val fechaPrestamo: Date,
-    @ColumnInfo(name = "fecha_entrega") val fechaEntrega: Date,
+    @ColumnInfo(name = "fecha_prestamo") val fechaPrestamo: String,
+    @ColumnInfo(name = "fecha_entrega") val fechaEntrega: String,
     @ColumnInfo(name = "libro") val libroId: Int,
     @ColumnInfo(name = "cliente") val clienteId: Int,
     )

@@ -7,5 +7,5 @@ import java.util.*
 
 @Entity(tableName = "autor")
 data class AutorModel(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "nombre_completo") val nombreCompleto: String,
+    @PrimaryKey() @ColumnInfo(name = "nombre_completo") val nombreCompleto: String,
     )

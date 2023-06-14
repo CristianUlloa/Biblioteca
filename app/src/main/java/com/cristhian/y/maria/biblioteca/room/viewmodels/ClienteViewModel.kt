@@ -19,10 +19,10 @@ class ClienteViewModel (application: Application) : AndroidViewModel(application
         repository = RepoCliente(clienteDao)
         listaClientes = repository.getClientes()
     }
-    fun insertGasto(cliente: ClienteModel) =
+    fun insertCliente(cliente: ClienteModel) =
         viewModelScope.launch(Dispatchers.IO) { repository.saveCliente(cliente) }
 
-    fun deleteGasto(cliente: ClienteModel) =
+    fun deleteCliente(cliente: ClienteModel) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteCliente(cliente)
         }

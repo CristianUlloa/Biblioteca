@@ -19,10 +19,10 @@ class PrestamoViewModel(application: Application) : AndroidViewModel(application
         repository = RepoPrestamo(prestamoDao)
         listaPrestamos = repository.getPrestamos()
     }
-    fun insertGasto(prestamo: PrestamoModel) =
+    fun insertPrestamo(prestamo: PrestamoModel) =
         viewModelScope.launch(Dispatchers.IO) { repository.savePrestamo(prestamo) }
 
-    fun deleteGasto(prestamo: PrestamoModel) =
+    fun deletePrestamo(prestamo: PrestamoModel) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.deletePrestamo(prestamo)
         }
