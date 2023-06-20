@@ -5,19 +5,19 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.cristhian.y.maria.biblioteca.databinding.ActivityAddActorBinding
+import com.cristhian.y.maria.biblioteca.databinding.ActivityAddAutorBinding
 import com.cristhian.y.maria.biblioteca.room.models.AutorModel
 import com.cristhian.y.maria.biblioteca.room.viewmodels.AutorViewModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class ActivityAddAutor : AppCompatActivity() {
-    private lateinit var binding: ActivityAddActorBinding
+    private lateinit var binding: ActivityAddAutorBinding
     private lateinit var viewModel: AutorViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAddActorBinding.inflate(layoutInflater)
+        binding = ActivityAddAutorBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
@@ -40,7 +40,7 @@ class ActivityAddAutor : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        inflater.inflate(R.menu.aceptar_cancelar, menu)
+        inflater.inflate(R.menu.menu_aceptar_cancelar, menu)
         return super.onCreateOptionsMenu(menu)
     }
 }
