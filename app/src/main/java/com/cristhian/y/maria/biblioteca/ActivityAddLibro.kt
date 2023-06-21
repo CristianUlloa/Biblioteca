@@ -2,7 +2,6 @@ package com.cristhian.y.maria.biblioteca
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
@@ -43,6 +42,16 @@ class ActivityAddLibro : AppCompatActivity() {
         viewModelIdioma = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(
             IdiomaViewModel::class.java)
         observeEvents()
+
+        GlobalScope.launch {
+
+            adapterAutor =
+                ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,
+                    viewModelAutor.listaAutores.value?.map { a ->
+                        a.nombreCompleto
+                    }?.toTypedArray()
+                )
+        }
     }
 
     private fun updateAdapters() {
@@ -61,7 +70,6 @@ class ActivityAddLibro : AppCompatActivity() {
                         a.nombreCompleto
                     }.toTypedArray());
             }
-            updateAdapters()
         })
         viewModelIdioma.listaIdiomas.observe(this, Observer { list ->
             list?.let {
@@ -70,8 +78,9 @@ class ActivityAddLibro : AppCompatActivity() {
                         a.idioma
                     }.toTypedArray());
             }
-            updateAdapters()
         })
+        updateAdapters()
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -80,16 +89,13 @@ class ActivityAddLibro : AppCompatActivity() {
                 val libro = LibroModel(
                     0,
                     binding.ETeditorial.text.toString(),
-                    binding.SPNautor.selectedItem.toString(),
+                    binding.SPNidioma.selectedItem.toString(),
                     binding.ETtema.text.toString(),
                     binding.ETtitulo.text.toString(),
                     binding.SPNidioma.selectedItem.toString(),
                     binding.ETcantidad.text.toString().toInt(),
                     binding.ETcantidad.text.toString(),
                 )
-                Log.d("INSERT",binding.SPNautor.selectedItem.toString())
-                Log.d("INSERT",binding.SPNidioma.selectedItem.toString())
-
                 viewModel.insertLibro(libro)
                 finish()
             }
@@ -102,7 +108,7 @@ class ActivityAddLibro : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        inflater.inflate(R.menu.menu_aceptar_cancelar, menu)
+        inflater.inflate(R.menu.aceptar_cancelar, menu)
         return super.onCreateOptionsMenu(menu)
     }
 }

@@ -39,7 +39,7 @@ class ActivityAddIdioma : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        inflater.inflate(R.menu.menu_aceptar_cancelar, menu)
+        inflater.inflate(R.menu.aceptar_cancelar, menu)
         return super.onCreateOptionsMenu(menu)
     }
 }

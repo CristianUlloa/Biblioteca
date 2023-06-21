@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import com.cristhian.y.maria.biblioteca.databinding.ActivityAddActorBinding
 import com.cristhian.y.maria.biblioteca.databinding.ActivityAddClienteBinding
+import com.cristhian.y.maria.biblioteca.room.models.AutorModel
 import com.cristhian.y.maria.biblioteca.room.models.ClienteModel
+import com.cristhian.y.maria.biblioteca.room.viewmodels.AutorViewModel
 import com.cristhian.y.maria.biblioteca.room.viewmodels.ClienteViewModel
 
 class ActivityAddCliente : AppCompatActivity() {
@@ -46,7 +50,7 @@ class ActivityAddCliente : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        inflater.inflate(R.menu.menu_aceptar_cancelar, menu)
+        inflater.inflate(R.menu.aceptar_cancelar, menu)
         return super.onCreateOptionsMenu(menu)
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.cristhian.y.maria.biblioteca.databinding.ActivityMainBinding
+import com.cristhian.y.maria.biblioteca.room.models.PrestamoModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,34 +20,28 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.menu_autor)
+        if(item.itemId == R.id.menu_add_autor)
         {
-            val intent = Intent(this, ActivityAutor::class.java)
+            val intent = Intent(this, ActivityAddAutor::class.java)
             startActivity(intent)
-        }else if(item.itemId == R.id.menu_cliente)
+        }else if(item.itemId == R.id.menu_add_cliente)
         {
-            val intent = Intent(this, ActivityCliente::class.java)
+            val intent = Intent(this, ActivityAddCliente::class.java)
             startActivity(intent)
-        }else if(item.itemId == R.id.menu_idioma)
+        }else if(item.itemId == R.id.menu_add_libro)
         {
-            val intent = Intent(this, ActivityIdioma::class.java)
+            val intent = Intent(this, ActivityAddLibro::class.java)
             startActivity(intent)
-        }else if(item.itemId == R.id.menu_libro)
+        }else if(item.itemId == R.id.menu_add_prestamo)
         {
-            val intent = Intent(this, ActivityLibro::class.java)
+            val intent = Intent(this, ActivityAddPrestamo::class.java)
             startActivity(intent)
-        }else if(item.itemId == R.id.menu_prestamo)
-        {
-            val intent = Intent(this, ActivityPrestamo::class.java)
-            startActivity(intent)
-        }
-
-        else if(item.itemId == R.id.menu_acerca_de)
-        {
-            //
         }else if(item.itemId == R.id.menu_salir)
         {
             finish()
+        }else if(item.itemId == R.id.menu_acerca_de)
+        {
+            //
         }
         return super.onOptionsItemSelected(item)
     }
