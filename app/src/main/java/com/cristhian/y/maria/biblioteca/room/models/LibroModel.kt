@@ -1,7 +1,6 @@
 package com.cristhian.y.maria.biblioteca.room.models
 
 import androidx.room.*
-import java.util.Date
 
 @Entity(tableName = "libro", foreignKeys = [
     ForeignKey(
@@ -20,7 +19,7 @@ import java.util.Date
 data class LibroModel(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "libroID") val id: Int,
     @ColumnInfo(name = "editorial")  val editorial: String,
-    @ColumnInfo(name = "autor")  val autorId: String,
+    @ColumnInfo(name = "autor")  val autor: String,
     @ColumnInfo(name = "tema")  val tema: String,
     @ColumnInfo(name = "titulo")  val titulo: String,
     @ColumnInfo(name = "idioma")  val idioma: String,

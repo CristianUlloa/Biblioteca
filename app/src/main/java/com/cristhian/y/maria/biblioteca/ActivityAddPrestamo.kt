@@ -80,7 +80,7 @@ class ActivityAddPrestamo : AppCompatActivity() {
                             PrestamoModel(
                                 0,
                                 binding.ETfechaPrestamo.text.toString(),
-                                binding.ETfechaEntrega.toString(),
+                                binding.ETfechaEntrega.text.toString(),
                                 it.id,
                                 it1.id,
                             )

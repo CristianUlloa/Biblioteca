@@ -13,7 +13,7 @@ import androidx.room.PrimaryKey
     @ColumnInfo(name = "segundo_apellido")  val segundoApellido: String,
     @ColumnInfo(name = "telefono")  val telefono: String,
     @ColumnInfo(name = "carnet")  val carnet: String,
-    @ColumnInfo(name = "dirrecion")  val dirrecion: String,
+    @ColumnInfo(name = "dirrecion")  val direccion: String,
 
     )
 {
