@@ -28,11 +28,6 @@ class ActivityAddPrestamo : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        adapterCliente = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayOf<String>())
-        adapterLibro = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayOf<String>())
-
-        updateAdapters()
-
         viewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(
             PrestamoViewModel::class.java)
         viewModelCliente = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(
@@ -58,17 +53,17 @@ class ActivityAddPrestamo : AppCompatActivity() {
                         a.getNombreCopleto()
                     }.toTypedArray());
             }
+            updateAdapters()
         })
         viewModelLibro.listaLibros.observe(this, Observer { list ->
             list?.let {
                 adapterLibro =
                     ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, it.map { a ->
-                        a.idioma
+                        a.titulo
                     }.toTypedArray());
             }
+            updateAdapters()
         })
-        updateAdapters()
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -99,7 +94,7 @@ class ActivityAddPrestamo : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        inflater.inflate(R.menu.aceptar_cancelar, menu)
+        inflater.inflate(R.menu.menu_aceptar_cancelar, menu)
         return super.onCreateOptionsMenu(menu)
     }
 }

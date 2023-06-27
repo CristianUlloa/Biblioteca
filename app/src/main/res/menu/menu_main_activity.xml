@@ -3,18 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_add_autor"
-        android:title="Agregar Autor" />
+        android:id="@+id/menu_autor"
+        android:title="Autores" />
     <item
-        android:id="@+id/menu_add_cliente"
-        android:title="Agregar Cliente" />
-    <item android:title="Agregar Idioma" />
+        android:id="@+id/menu_cliente"
+        android:title="Clientes" />
     <item
-        android:id="@+id/menu_add_libro"
-        android:title="Agregar Libro" />
+        android:id="@+id/menu_idioma"
+        android:title="Idiomas" />
     <item
-        android:id="@+id/menu_add_prestamo"
-        android:title="Agregar Prestamo" />
+        android:id="@+id/menu_libro"
+        android:title="Libros" />
+    <item
+        android:id="@+id/menu_prestamo"
+        android:title="Prestamo" />
     <item
         android:id="@+id/menu_acerca_de"
         android:title="Acerca de" />

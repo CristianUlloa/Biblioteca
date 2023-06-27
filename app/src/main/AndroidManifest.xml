@@ -11,6 +11,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Biblioteca"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ActivityPrestamo"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLibro"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityIdioma"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCliente"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAutor"
+            android:exported="false" />
         <activity
             android:name=".ActivityAddPrestamo"
             android:exported="false" />
