@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "926526638684",
+    "project_id": "bibliotica-38254",
+    "storage_bucket": "bibliotica-38254.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926526638684:android:54543af55b6d7db0d1f499",
+        "android_client_info": {
+          "package_name": "com.cristhian.y.maria.biblioteca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926526638684-2hnvt6i3t52o4r52goobrhnmo1he2od6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4Vl2bESvIe4jyV_W7plwXdbr7Hn8L3N8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926526638684-0n3o0cbl9f2j6cnm6ol4c5nor5a1e3jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
