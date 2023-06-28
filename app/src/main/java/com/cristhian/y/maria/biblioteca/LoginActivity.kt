@@ -1,24 +1,24 @@
 package com.cristhian.y.maria.biblioteca
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
+import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.cristhian.y.maria.biblioteca.databinding.ActivityLoginBinding
-import com.cristhian.y.maria.biblioteca.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
+
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
     private lateinit var binding: ActivityLoginBinding
 
-    private val KEY_PREFS: String = "login_prefs";
-    private val EMAIL: String = "email"
-    private val PROVIDER: String = "provider"
-
-    private val GOOGLE_INT_KEY: Int = 100;
-
-    private fun setup(email: String?, provider: String?) {
-    }
+    private val RC_SIGN_IN: Int = 1;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,44 +26,57 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val bundle: Bundle? = intent.extras
-        val email: String? = bundle?.getString(EMAIL)
-        val provider: String? = bundle?.getString(PROVIDER)
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .requestIdToken(getString(R.string.web_client_id))
+            .build()
 
-        setup(email, provider)
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        val prefs = getSharedPreferences(KEY_PREFS, Context.MODE_PRIVATE).edit()
-        prefs.putString(EMAIL, email)
-        prefs.putString(PROVIDER, provider)
-        prefs.apply()
-
-        session();
+        val account = GoogleSignIn.getLastSignedInAccount(this)
+        startMainActivity(account)
 
         binding.btnGoogle.setOnClickListener {
-            val count = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.web_client_id))
-                .requestEmail()
-                .build()
-
-            val client = GoogleSignIn.getClient(this, count)
-
-            startActivityForResult(client.signInIntent, GOOGLE_INT_KEY)
+            val signInIntent = mGoogleSignInClient.signInIntent
+            startActivityForResult(signInIntent, RC_SIGN_IN)
         }
     }
 
-    private fun session() {
-        val prefs = getSharedPreferences(KEY_PREFS, Context.MODE_PRIVATE)
-        val email: String? = prefs?.getString(EMAIL, null)
-        val provider: String? = prefs?.getString(PROVIDER, null)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-        if(email != null && provider != null)
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+
+        if (requestCode == RC_SIGN_IN) {
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
+            handleSignInResult(task)
+        }
+    }
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+        try {
+            val account = completedTask.getResult(ApiException::class.java)
+
+            // Signed in successfully, show authenticated UI.
+            startMainActivity(account)
+        } catch (e: ApiException) {
+            // The ApiException status code indicates the detailed failure reason.
+            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+            Log.w(TAG, "signInResult:failed code=" + e.statusCode)
+            startMainActivity(null)
+        }
+    }
+    private fun startMainActivity(account: GoogleSignInAccount?) {
+        if (account != null)
         {
-            startMainActivity(email, provider);
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("email", account.email)
+            startActivity(intent)
+        } else
+        {
+            Log.d("email", "no login email is null")
         }
-
     }
 
-    private fun startMainActivity(email: String, provider: String) {
-
-    }
 }

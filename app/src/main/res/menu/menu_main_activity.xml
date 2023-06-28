@@ -21,6 +21,7 @@
         android:id="@+id/menu_acerca_de"
         android:title="Acerca de" />
     <item
-    android:id="@+id/menu_salir"
-    android:title="Salir" />
+        android:id="@+id/menu_salir"
+        android:title="Cerra session" />
+
 </menu>

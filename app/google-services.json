@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "926526638684",
-    "project_id": "bibliotica-38254",
-    "storage_bucket": "bibliotica-38254.appspot.com"
+    "project_number": "161301458878",
+    "project_id": "biblioteca-b53f0",
+    "storage_bucket": "biblioteca-b53f0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:926526638684:android:54543af55b6d7db0d1f499",
+        "mobilesdk_app_id": "1:161301458878:android:3a09ab9f06f51d9bd993ef",
         "android_client_info": {
           "package_name": "com.cristhian.y.maria.biblioteca"
         }
       },
       "oauth_client": [
         {
-          "client_id": "926526638684-2hnvt6i3t52o4r52goobrhnmo1he2od6.apps.googleusercontent.com",
+          "client_id": "161301458878-bfm2f8qq660d2hp0a55ch4u6kqdtre0m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cristhian.y.maria.biblioteca",
+            "certificate_hash": "181ac04c31dd08f16983341001c35facd71f1816"
+          }
+        },
+        {
+          "client_id": "161301458878-2hh8ovq1p1fe520jc8v0otsjt69niusp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC4Vl2bESvIe4jyV_W7plwXdbr7Hn8L3N8"
+          "current_key": "AIzaSyBvMApeJIZGLchmWJPqpeLfFml5D8QBBYk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "926526638684-0n3o0cbl9f2j6cnm6ol4c5nor5a1e3jf.apps.googleusercontent.com",
+              "client_id": "161301458878-2hh8ovq1p1fe520jc8v0otsjt69niusp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
