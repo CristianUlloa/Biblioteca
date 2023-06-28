@@ -7,6 +7,15 @@ plugins {
 }
 
 android {
+
+    signingConfigs {
+
+        debug {
+            storeFile file("./debug/debug.keystore")
+        }
+
+    }
+
     viewBinding {
         enabled = true
     }
